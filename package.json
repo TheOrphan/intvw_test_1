@@ -1,8 +1,10 @@
 {
-  "name": "intvw_test",
-  "version": "0.1.0",
+  "name": "intvw_test_1",
+  "version": "01",
+  "homepage": "https://joiel.github.io/intvw_test_1",
   "private": true,
   "scripts": {
+    "deploy": "gh-pages -d build",
     "format": "prettier --write \"/next.config.js\" \"components/**/*.js\" \"modules/**/*.js\" \"utils/**/*.js\" \"pages/**/*.js\" \"test/**/*.js\"",
     "dev": "yarn clean && cross-env NODE_ENV=development next -p 3010",
     "build": "yarn clean && cross-env NODE_ENV=production next build",
@@ -15,6 +17,7 @@
   },
   "dependencies": {
     "@zeit/next-less": "^1.0.1",
+    "gh-pages": "^2.1.1",
     "next": "9.5.5",
     "react": "17.0.1",
     "react-dom": "17.0.1",
@@ -30,5 +33,17 @@
     "cross-env": "^6.0.3",
     "prettier": "^1.19.1",
     "rimraf": "^3.0.2"
-  }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
 }
