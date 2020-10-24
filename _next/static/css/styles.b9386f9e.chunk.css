@@ -1,0 +1,48 @@
+@media (max-width: 575px) {
+  .btn-add-contact.sm {
+    position: fixed !important;
+    line-height: 1.199;
+    font-size: 30px !important;
+    width: 70px !important;
+    height: 70px !important;
+    visibility: visible;
+    bottom: 15vh;
+    right: 15vw;
+  }
+  .btn-add-contact.md {
+    visibility: hidden;
+  }
+}
+@media (min-width: 576px) {
+  .btn-add-contact.sm {
+    position: fixed !important;
+    visibility: visible;
+    bottom: 5vh;
+    right: 15vw;
+  }
+  .btn-add-contact.md {
+    visibility: hidden;
+  }
+}
+@media (min-width: 768px) {
+  .btn-add-contact.md {
+    position: absolute !important;
+    line-height: 1.199;
+    font-size: 15px !important;
+    height: 37px !important;
+    visibility: visible;
+    top: 16px;
+    left: 220px;
+  }
+  .btn-add-contact.sm {
+    visibility: hidden;
+  }
+}
+.btn-add-contact {
+  bottom: 5vh;
+  right: 5vw;
+  border-color: #e8e8e8 !important;
+  color: #898989 !important;
+  background-color: #fafafa !important;
+}
+
