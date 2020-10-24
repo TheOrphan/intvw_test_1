@@ -13,8 +13,6 @@ const themeVariables = lessToJS(
 );
 
 module.exports = withLess({
-  assetPrefix: '/intvw_test_1/',
-  basePath: '/intvw_test_1',
   env: {
     // Reference a variable that was defined in the .env file and make it available at Build Time
     URL_DEVELOPMENT: process.env.URL_DEVELOPMENT,
@@ -58,4 +56,6 @@ module.exports = withLess({
 
     return config;
   },
+  assetPrefix: '/intvw_test_1/',
+  basePath: '/intvw_test_1',
 });
