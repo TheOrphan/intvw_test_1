@@ -89,6 +89,7 @@ export default function Index({ contact, refetch }) {
       url: URL + 'contact/' + id,
     })
       .then(function(response) {
+        refetch({ type: 'refetch', refetch: true });
         message.success('Delete succeed');
       })
       .catch(function(error) {

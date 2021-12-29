@@ -44,7 +44,7 @@ function AddContactForm(props) {
       data: values,
     })
       .then(function(response) {
-        console.log(response);
+        props.refetch({ type: 'refetch', refetch: true });
         message.success('Contact saved');
         dispatch({ type: 'CLOSE_DRAWER' });
       })
@@ -53,8 +53,6 @@ function AddContactForm(props) {
           message.error(
             'Data create fail (' + error.response.data.message + ')',
           );
-        } else {
-          console.log(error);
         }
       });
   }

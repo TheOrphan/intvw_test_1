@@ -104,7 +104,7 @@ export default function Index() {
         )}
       />
 
-      <AddContact />
+      <AddContact refetch={dispatch} />
     </div>
   );
 }
