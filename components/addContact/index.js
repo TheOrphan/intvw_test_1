@@ -40,7 +40,7 @@ function AddContactForm(props) {
   function addContact(values) {
     axios({
       method: 'POST',
-      url: URL + 'contact/',
+      url: URL + 'contact',
       data: values,
     })
       .then(function(response) {
