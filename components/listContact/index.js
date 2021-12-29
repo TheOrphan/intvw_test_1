@@ -18,6 +18,19 @@ export default function Index({ contact, refetch }) {
     commitEdit: false,
   });
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      let i = 0;
+      if (i === 0) {
+        refetch({ type: 'refetch', refetch: true });
+      }
+      i++;
+    }, 10000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   function editContact(id) {
     axios({
       method: 'get',
@@ -93,8 +106,13 @@ export default function Index({ contact, refetch }) {
         message.success('Delete succeed');
       })
       .catch(function(error) {
-        console.log(error);
-        message.error('Delete failed');
+        let msg = '';
+        if (error.response) {
+          msg = error.response.data.message;
+        } else {
+          msg = 'Error' + error?.message;
+        }
+        message.error('Delete failed ' + msg);
       });
   }
 
